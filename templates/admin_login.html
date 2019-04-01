@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% if fail %}
+            <h2>账号或密码错误, 请重新输入</h2><br>
+            {% endif %}
+            <h1>管理员登陆界面</h1><br>
+        </div>
+        <div class="col-md-6 offset-3">
+            <form method="post">
+                <div class="form-group">
+                    <label>Admin name</label>
+                    <input aria-describedby="emailHelp" class="form-control" name="admin_name" placeholder="Enter admin name"
+                           required type="text">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input class="form-control" name="password" placeholder="Password" required type="password">
+                </div>
+                <input class="btn btn-info btn-block" type="submit" value="Login">
+            </form>
+            <a href="/">
+                <button class="btn btn-info btn-block">返回首页</button>
+            </a>
+        </div>
+        <div class="col-md-12">
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

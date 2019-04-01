@@ -1,0 +1,67 @@
+*{
+    font-family: '宋体', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: initial;
+}
+a{
+    color: #222222;
+    text-decoration: none;
+    padding: 10px;
+}
+a:hover{
+    text-decoration: none;
+    color: #b92c28;
+}
+h1, h2{
+    color: #cc9900;
+}
+
+/*header*/
+div#header div.row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: right;
+}
+div#header div.row div.col-md-4{
+    text-align: center;
+}
+div#header div.row div a{
+    font-size: 25px;
+    font-weight: 300;
+}
+div#header div.row div:first-child a{
+    color: #cc9900;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    left: -200px;
+}
+div#header div.row div:first-child a:hover{
+    color: #b92c28;
+}
+
+div#carousel img{
+    width: 1000px;
+    height: 500px;
+}
+
+
+
+/*foot*/
+div#foot{
+    margin-top: 20px;
+    background-image: url(../img/classic-pattern-bg.png);
+    padding-bottom: 40px;
+}
+div#foot p{
+    color: whitesmoke;
+}
+div#foot div{
+    text-align: center;
+}
+
+div#foot div.col-md-3>img{
+    width: 250px;
+    height: 250px;
+}

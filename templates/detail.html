@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>书籍详情</h1>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Book Price</th>
+                    <th scope="col">Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{{book.id}}</th>
+                    <td>{{book.book_name}}</td>
+                    <td>{{ book.book_price}}</td>
+                    <td>这一本非常优秀的书籍, 建议您立即购买, 晚的话就没货了.......</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <a href="/books">
+                <button class="btn btn-secondary">返回书籍列表</button>
+            </a>
+            <a href="/">
+                <button class="btn btn-secondary">返回主页</button>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

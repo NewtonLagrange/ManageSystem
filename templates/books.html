@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>图书管理</title>
+    <link href="../static/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <script charset="utf-8" src="" type="text/javascript"></script>
+    <link href="" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="h1">书籍清单</h1>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Book Price</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Alter</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for book in books %}
+                <tr>
+                    <th scope="row">{{book.id}}</th>
+                    <td>{{book.book_name}}</td>
+                    <td>{{ book.book_price}}</td>
+                    <td><a class="text-info" href="/detail{{book.id}}">More</a></td>
+                    <td><a class="text-info" href="/alter_book{{book.book_name}}">更改</a></td>
+                    <td><a class="text-info" href="/books{{book.book_name}}">删除</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <a href="/add_book">
+                <button class="btn btn-secondary">增加书籍</button>
+            </a>
+            <a href="/">
+                <button class="btn btn-secondary">返回主页</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

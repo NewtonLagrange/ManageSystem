@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% if exist %}
+            <h2>该书名已存在, 请使用其他书名</h2>
+            {% endif %}
+            <h1>修改如下书籍</h1>
+            <br>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Book Price</th>
+                    <th scope="col">Details</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{{book.id}}</th>
+                    <td>{{book.book_name}}</td>
+                    <td>{{ book.book_price}}</td>
+                    <td><a class="text-info" href="/detail{{book.id}}">More</a></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <form action="" method="post">
+                <input class="input-group-lg" name="new_book_name" placeholder="new book name" type="text">
+                <input class="input-group-lg" name="new_book_price" placeholder="new price" type="text">
+                <input class="input-group-lg" type="submit">
+            </form>
+            <br>
+            <a href="/books">
+                <button class="btn btn-secondary">返回书籍列表</button>
+            </a>
+            <a href="/">
+                <button class="btn btn-secondary">返回首页</button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+    font-size: 20px;
+}
+h1{
+    font-family: 华文行楷, serif;
+}
+div.col-md-12{
+    margin-top: 40px;
+    text-align: center;
+}
+
+body{
+    background-color: whitesmoke;
+}
+ol{
+    margin: 0 auto;
+    text-align: left;
+    font-size: 30px;
+}
+ol li{
+    margin-left: 30%;
+}
+a{
+    margin: 0 20px;
+    width: 10px;
+}
+button{
+    text-decoration: none;
+}
+label{
+    margin-left: 0;
+}

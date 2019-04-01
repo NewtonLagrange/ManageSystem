@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link href="../static/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <script charset="utf-8" src="" type="text/javascript"></script>
+    <link href="" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="h1">用户列表</h1>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">User Id</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                <tr>
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.username}}</td>
+                    <td><a class="text-info" href="/users{{user.username}}">删除</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <a href='/register'>
+                <button class="btn btn-secondary">注册用户</button>
+            </a>
+            <a href="/">
+                <button class="btn btn-secondary">返回主页</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
